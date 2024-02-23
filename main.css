@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    text-shadow: 1px 1px 1px rgb(85, 90, 89);
+    color: wheat;
+    cursor: pointer;
+}
+
+html, body{
+    margin: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    background: linear-gradient(45deg, #333, burlywood);
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1:hover , h2:hover{
+    opacity: .8;
+}
+
+h1, h2{
+    text-align: center;
+    padding: .5em;
+    cursor: cell;
+    transition: all .4s;
+}
+
+h1{
+    border: .5em ridge #ddd;
+    margin: 0;
+    width: 100%;
+    color: wheat;
+    background-color: #333;
+    font-size: 2.9rem;
+}
+
+h2{
+    background-color: #333;
+    color: wheat;
+    border-bottom: 3px dotted black;
+    font-size: 2rem;
+}
+
+ul{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 2% 2% 2% 2%;
+    font-weight: 800;
+    text-wrap: nowrap;
+    overflow: hidden;
+    font-size: .8rem;
+}
+
+header, footer{
+    background-color: #333;
+    border-bottom: 1px solid gainsboro;
+}
+
+main ul{
+    position: sticky;
+    top: 0;
+}
+
+hr{
+    height: 10px;
+    background: black;
+    border: none;
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+p{
+    text-indent: 3em;
+}
+
+p, dt{
+    font-weight: 500;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.1rem;
+    text-shadow: 1px -1px 5px #333;
+    letter-spacing: 1.5px;
+    word-spacing: 5px;
+}
+
+ul li:hover{
+    box-shadow: 1px 1px 20px tomato;
+}
+
+main{
+    border-top: 1px solid black;
+}
+
+aside{
+    width: 100%;
+}
+
+aside p{
+    text-indent: 0;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+table{
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px outset sandybrown;
+}
+
+th, td{
+    padding: 1em;
+    width: 50%;
+    border-collapse: collapse;
+    cursor: zoom-in;
+}
+
+th{
+    font-weight: 900;
+}
+
+.headingTable {
+    text-decoration: 2px underline black;
+}
+
+summary{
+    padding: .3em;
+}
+
+details{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
