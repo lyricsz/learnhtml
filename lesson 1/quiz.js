@@ -113,7 +113,7 @@ quizBtn.onclick = () => {
 
 btn1.onclick =() => {
     array--;
-    score-=0.5;
+    score-=1.5;
     continueQuiz();
 }
 btn2.onclick = () => {
