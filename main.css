@@ -1,9 +1,7 @@
 *{
     box-sizing: border-box;
-    image-rendering: pixelated;
     text-shadow: 1px 1px 1px rgb(85, 90, 89);
     color: wheat;
-    cursor: pointer;
 }
 
 html, body{
@@ -56,11 +54,24 @@ ul li{
     border: 1px solid red;
     border-radius: 5px;
     padding: 1em;
-    margin: 2% 2% 2% 2%;
+    margin: 1% 1% 1% 1%;
     font-weight: 800;
     text-wrap: nowrap;
+    -ms-text-overflow: clip;
+    text-overflow: clip;
+    overflow-wrap: break-word;
     overflow: hidden;
     font-size: .8rem;
+}
+
+a{
+    text-decoration: none;
+    transition: none;
+}
+
+a:hover{
+    text-decoration: none;
+    transition: none;
 }
 
 header, footer{

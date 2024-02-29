@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="author" content="PJ Dev" />
+    <meta name="description" content="Hey, Hope we all have fun Learning front-end web development skill -- HTML" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../lessonStyle.css" />
+</head>
+<body>
+    <header id="header">
+        <h1>Learn HTML With PJ Dev</h1>
+        <ul>
+            <a href="../index.html">
+                <li>Home</li>
+            </a>
+            <a href="../learnhtml.html">
+                <li>Learn HTML</li>
+            </a>
+            <a href="../about.html">
+                <li>About</li>
+            </a>
+            <a href="../contact.html">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </header>
+    <hr />
+    <main id="main">
+        <aside>
+            <ul>
+                <a href="#overview"><li>Course Overview</li></a><br>
+                <a href="#content"><li>Main Content</li></a>
+            </ul>
+        </aside>
+        <h2 id="overview">Course Overview</h2>
+
+
+        <h2 id="content">Main Content</h2>
+
+        <p>
+            HTML is the basic building block of every website. It is the foundation of all websites (other technologies build upon it). HTML is the language mainly used for building plain website (no styling, interaction, dynamicity). 
+        </p>
+        <p>
+            HTML Stands for HyperText Markup Language. This further clarifies that <strong>HTML </strong> is not a programming language but a markup language. Markup include text, paragraphs, images, list, tables e.t.c. 
+        </p>
+        <p>
+            The "<strong>HyperText</strong>" in HTML simply is the text that when clicked changes the URL (URL stands for Uniform Resource Locator -- also known as web address ) to the HyperLink. It's fine if you've not grasp what HyperText means yet. Let's break it down further. 
+        </p>
+        <p>
+            Have you ever visited a website where you click on the "About" and it takes you to another webpage (About Page)? The text "About" is the <strong>HyperText</strong> and the new URL (or address) -- "About Page" is the HyperLink. 
+        </p>
+        <fieldset>
+            <legend>Note:- </legend>
+            <p>The HyperText is always visible whereas the HyperLink is not visible. HyperText is text that when clicked helped us navigate to another page. I'll explain this further later.</p>
+        </fieldset>
+        <hr />
+        <h3>Pre-requisite in order to learn HTML.</h3>
+        <p>In order to learn HTML, you only need to have the passion, a good computer, a web browser (most recommended - Chrome), and a text editor / program editor software if you are familiar with it. </p>
+        <p>To help with the text editor / program editor (free software), check the below list: </p>
+        <dl>
+            <dt>Android Text Editors (Not recommended to learn coding / programming on Android) :- </dt>
+            <dd>
+                <ol>
+                    <li>Acode: <small>A Very Powerful text editor with a live preview of your <big>HTML</big> codes. It is much more recommended after it's recent updates.</small></li>
+                    <li>SpkEditor: <small>This editor is not fully offline. But what i personally enjoy about it is being able to add libraries (for programmers) to one's project easily and fast.</small></li>
+                    <li>AIDE: <small>Not 100% recommended since it's not 100% free. But this program editor allows you to write your HTML codes and test it for free. </small></li>
+                    <p>Other editors include TrebEdit, WebCode, Code Studio e.t.c</p>
+                </ol>
+            </dd>
+            <dt>Editors for PCs: </dt>
+            <dd>
+                <ol>
+                    <li>Notepad: <small>This is a free text editor that probably comes pre-installed (already installed) on most PC's (either MAC OS, Window, or Linux). It is not that recommended for professional use, but i'll recommend it for beginners</small> </li>
+                    <li>VS Code: <small>Visual Studio Code is a lightweight program editor. It is lightweight but very powerful program editor. It also allows you to add extensions (more functionality) from </small> <big>Extension Store.</big></li>
+                    <li>Sublime Text: <small>Sublime Text is another free option out there. It's been out for long time, and still powerful till date. It is widely used by professional programmers. </small></li>
+                    <li>Intellij Ide: <small>Although not free, this is a very powerful program editor. It includes so many features and it can be used for other cool stuff apart from web development. It has a free version online (mainly created for students) .</small></li>
+                    <p>Other editors include, Notepad, Notepad++, Visual Studio e.t.c.</p>
+                </ol>
+            </dd>
+        </dl>
+        <p>
+            I hope the above list help clarifies the editors available, and hopefully you've picked one (if you're familiar with a code editor please kindly use it 😊). I'll be using VS Code throughout the tutorial series. You can download it for <a href="" target="_blank">free here</a>
+        </p>
+        <fieldset>
+            <legend>Note: </legend>
+            <p>Program editors are mainly / specifically created for A Specific Programming Language . E.g QB Dos for "BASIC (Beginner-All Purpose Symbollic Instructional Code)". Program editors offer more features like code completion, syntax highlighting, compiling, e.t.c. Text editors mainly edit text only E.g Notepad. Sometimes <b>Program editors</b> is mostly known as <b>Code editors</b>.</p>
+        </fieldset>
+
+        <h3>Welcome aboard once again</h3>
+        <p>Hello there, Once again. And welcome. This whole course is just like basic pre-requisite before moving to the next chapter.
+            If there is any area you want us to clarify to you more, you can kindly bring it up(the area -- topic/sub-topic) on our <a href="">Official WhatsApp Group</a>. You can message one of the admins in case you want priacy. Thanks. </a> 
+        </p>
+
+        <button id="takeQuiz">Take Quiz</button>
+        <h2>Project</h2>
+        <p>No project. But we'll like to know your favorite text editors... (drop it to our Official WhatsApp Group)</p>
+        <button class="btn">Prev Lesson</button>
+        <button class="btn">Next Lesson</button>
+    </main>
+    <section id="quizBox">
+        <p id="question" style="font-size: 1.5rem; text-indent: 0;">What does <b>HTML</b> stands for? </p>
+        <form>
+            <label>
+                <input type="radio" name="quiz" id="option1"/>
+                <span id="optionTxt1"></span>
+            </label>
+             <label>
+                <input type="radio" name="quiz"  id="option2"/>
+                <span id="optionTxt2"></span>
+            </label> 
+            <label>
+                <input type="radio" name="quiz" id="option3"/>
+                <span id="optionTxt3"></span>
+            </label> 
+            <label>
+                <input type="radio" name="quiz" id="option4" />
+                <span id="optionTxt4"></span>
+            </label>
+            <div class=".lastSpan">999</div>
+            <button id="btn1" type="button">Prev</button>
+            <button id="btn2" type="button">Submit</button>
+            <button id="btn3" type="button">Next</button>
+        </form>
+    </section>
+    <hr style="margin-bottom: 0;" />
+    <footer id="footer">
+        <ul>
+            <a href="../index.html">
+                <li>Home</li>
+            </a>
+            <a href="../contact.html">
+                <li>Contact</li>
+            </a>
+            <a href="../support.html">
+                <li>Support</li>
+            </a>
+            <a href="../about.html">
+                <li>About</li>
+            </a>
+            <a href="../sitemaps.html">
+                <li>Sitemaps</li>
+            </a>
+            <a href="../sourcegit.html">
+                <li>Source Code</li>
+            </a>
+        </ul>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>
