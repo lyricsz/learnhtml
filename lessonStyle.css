@@ -89,3 +89,29 @@ input[type="radio"]{
     text-shadow: 1px 1px 1px rgb(85, 90, 89);
     color: wheat;
 }
+
+code{
+    color: black;
+    text-shadow: none;
+    background-color: #eee;
+    width: 100%;
+    display: block;
+    border-top: 1em solid salmon;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2%;
+    padding-top: 3%;
+}
+
+#code{
+    position: relative;
+}
+
+fieldset #copy{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    max-height: 2em;
+    font-size: 1rem;
+    background-color: black;
+    color: gainsboro;
+}
