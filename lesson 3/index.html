@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 2 - DOCTYPE Declaration, HTML Element</title>
+    <meta name="author" content="PJ Dev" />
+    <meta name="description" content="Hey, Hope we all have fun Learning front-end web development skill -- HTML" />
+    <link rel="stylesheet" href="../mainLesson.css" />
+    <link rel="stylesheet" href="../lessonStyle.css" />
+</head>
+<body>
+    <header id="header">
+        <h1>Learn HTML With PJ Dev</h1>
+        <ul>
+            <a href="../index.html">
+                <li>Home</li>
+            </a>
+            <a href="../learnhtml.html">
+                <li>Learn HTML</li>
+            </a>
+            <a href="../about.html">
+                <li>About</li>
+            </a>
+            <a href="../contact.html">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </header>
+    <hr />
+    <main id="main">
+        <aside>
+            <ul>
+                <a href="#overview"><li>Course Overview</li></a><br>
+                <a href="#content"><li>Main Content</li></a>
+                <a href="#project"><li>Project</li></a>
+            </ul>
+        </aside>
+        <h2 id="overview">Course Overview</h2>
+        <p>In this chapter, we'll try to learn about what HTML Element is? What is DOCTYPE, and Why DOCTYPE?</p>
+        <h2 id="content">Main Content</h2>
+        <p>Hello World! And Welcome to the most fun chapter you've ever seen so far. </p>
+        <p>First, We already know HTML. But A Webpage is made up of element, and element consist of tags and contents. We'll expand on this later. </p>
+        <p>HTML code consists of only two things: <strong>DOCTYPE</strong> and <strong>ELEMENTS</strong>. So, Whatever we see in our webpage is an element? But is that 100% true? Let's find out using an example: </p>
+        <fieldset id="code">
+            <legend>index.html</legend>
+            <div id="copy" onclick="copyText()">&lt;&CirclePlus;Copy&gt;</div>
+            <code id="clipText">
+                &lt;!DOCTYPE html&gt; <br />
+                &lt;html lang="en-US"&gt; <br />
+                &lt;head&gt; <br />
+                &lt;title&gt; John Doe Greetings &lt;/title&gt; <br />
+                &lt;/head&gt; <br />
+                &lt;body&gt; <br />
+                &lt;p&gt; Happy New Month &lt;/p&gt; <br />
+                &lt;/body&gt; <br />
+                &lt;/html&gt;
+            </code>
+        </fieldset>
+        <p>This code might look a bit cryptic but we'll explain what it does later. For now, run the above code.</p>
+        <h3>Element VS. Tags VS. Content</h3>
+        <p>An Element in a <strong>HTML code</strong> consist of tags and content. The basic syntax for a tag is as below:</p>
+        <code>&lt;tagName&gt; & &lt;/tagName&gt;</code>
+        <p>The above syntax might be hard to deciphered. Let's help with that. A basic HTML tag will have opening tag and closing tag. The above syntax can also be written as below:</p>
+        <code>&lt;openingTag&gt; & &lt;/closingTag&gt;</code>
+        <p>Notice that we have a less-than symbol, followed by the tagName, followed by the greater-than symbol. (For the opening tag). The only difference between an opening tag and a closing tag is the slash character in the closing tag ( / ). </p>
+        <p>Look at our above example, Take a look if you can find the following tags:</p>
+        <code>&lt;title&gt; & &lt;/title&gt;</code><br />
+        <code>&lt;body&gt; & &lt;/body&gt;</code> 
+        <p>If you did, congrats!!! you are getting what tags mean. If you don't I assure you will before we end this chapter. </p>
+        <p>Check out below table:</p>
+        <table width="80%" border="2">
+            <tr>
+                <th>The Tags</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <th>&lt;!DOCTYPE html&gt;</th>
+                <td>The doctype declaration, tells the browser which version of HTML you're working on. This doctype declaration (&lt;!DOCTYPE html&gt;) tells the broswer the code was written using HTML5. </td>
+            </tr>
+            <tr>
+                <th>&lt;html lang="en-US"&gt;</th>
+                <td>This tells the browser "hey , our html codes start after". (It's like a hint for the web browser to read what's inside it as HTML codes). This is the opening HTML tag.</td>
+            </tr>
+            <tr>
+                <th>&lt;head&gt;</th>
+                <td>The opening head tag. Every webpage is divided into two sections. The head sections are always invisible to the end-user. However we used them to add information about our web page. (e.g the title,  the character set)</td>
+            </tr>
+            <tr>
+                <th>&lt;title&gt; John Doe Greetings &lt;/title&gt;</th>
+                <td>The title element. The content is the Title that appears at the  top  bar of our webpage. Here, the content is "<strong>John Doe Greetings</strong>".</td>
+            </tr>
+            <tr>
+                <th>&lt;/head&gt;</th>
+                <td>Closing head tag.</td>
+            </tr>
+            <tr>
+                <th>&lt;body&gt;</th>
+                <td>Opening body tag. The body section is what's visible in our webpage. This is where our paragraphs, headings, list, images, videos e.t.c goes.</td>
+            </tr>
+            <tr>
+                <th> &lt;p&gt; Happy New Month &lt;/p&gt;</th>
+                <td>The paragraph element. The paragraaph element displays the content as a paragraph in our webpage. The content here is "<strong>Happy New Month</strong>".</td>
+            </tr>
+            <tr>
+                <th> &lt;/body&gt;</th>
+                <td>Closing Body tag. </td>
+            </tr>
+            <tr>
+                <th> &lt;/html&gt;</th>
+                <td>The closing HTML Tag. </td>
+            </tr>
+        </table>
+        <fieldset>
+            <legend>Note:-</legend>
+            <p>Opening tag and closing tag is also known as Starting tag (Opening tag) and Ending tag (closing tag).</p>
+        </fieldset>
+        <p>I'll encourage you get more familiar with the above table. It explains our Earlier code. But... Wait! You notice we use content and element? What is that? What is DOCTYPE Declaration?</p>
+        <h3>HTML Element</h3>
+        <p>Now that we know what HTML tag is, let's discuss about HTML Element. HTML element consist of HTML Tag and It's content.</p>
+        <fieldset>
+            <legend>Note:-</legend>
+            <code>
+                &lt;html&gt; & &lt;/html&gt;
+            </code>
+            <p>The HTML Tag is often refer to as the root tag. To avoid confusing it with other Tags... That we all known as HTML tag. </p>
+        </fieldset>
+        <p>A content of a HTML Tag is what's inbetween the Opening tag and the Closing tag. Take a look at below code:</p>
+        <code>
+            &lt;tagName&gt; Content &lt;/tagName&gt;
+        </code>
+        <p>Take a look at the word <strong>Content</strong> in the above code, you can easily notice it's inbetween Opeing tage and Closing tag? So... That is... You got it right. That is the content. Take a look of our Earlier HTML Code, Look for the below code: </p>
+        <code>
+            &lt;p&gt; Happy New Month &lt;/p&gt;
+        </code>
+        <p>The opening tag is <strong>&lt;p&gt;</strong>, the closing tag is <strong>&lt;/p&gt;</strong>, and the content is <strong>Happy New Month</strong>. Kindly note that the Content can also be an HTML Element. But what is HTML Element? </p>
+        <p>HTML Element consistof Starting tag, Ending tag, And it's content. Let's use an example to know it more better:</p>
+        <code>
+            &lt;p&gt; I AM A PARAGRAPH &lt;/p&gt;
+        </code>
+        <p>From the above code, we can say the Tag in it is <strong>&lt;p&gt; & &lt;/p&gt;</strong>, the content is <strong>I AM A PARAGRAPH</strong>. But the combination of both the tag and the content is the Element in the above code, So the above code is an entire HTML Element (IT consist of opening and closing tag and the content). </p>
+        <p>I believe by now we know what HTML Tag is, What content is, and What an HTML Element is? You can make a request in our WhatsApp group if by now you still haven't grasp it yet. (It's very important to know this). </p>
+        <fieldset>
+            <legend>Note:-</legend>
+            <p>If a content of an HTML Element is Also another HTML Element, then we can say that the Element is a nested element. We also have empty element. They only have Opening tag with no closing tag. We'll explain that better in the next chapter.  </p>
+        </fieldset>
+        <h3>DOCTYPE Declaration</h3>
+        <p>The Document type Declaration (also known as DOCTYPE Declaration) is what sets our HTML Code apart. We don't want to let the browser guess what version of HTML We are using. What if we're using HTML5 and the browser guess we are using HTML4? The DOCTYPE Declaration is what comes first in your HTML Code. It lets the browser knows which version of HTML Your code is. </p>
+        <p>Each version of HTML has it's specialized DOCTYPE Declaration. For the previous versions before HTML5, The DOCTYPE was so cryptic to know and be able to remember so quick. However, HTML5 Provides us much easier example. Take a look at HTML5 DOCTYPE Declaration.</p>
+        <code>
+            &lt;!DOCTYPE html&gt;
+        </code>
+        <p>It's way easier to know and remember. Let's take a look at HTML4 doctype declaration: </p>
+        <code>
+            &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd"&gt;
+        </code>
+        <p>Ha! This seems cryptic, isn't it? Well, Thanks to HTML5 for making life easier for us. </p>
+        <p>Always include DOCTYPE declaration in your HTML code. </p>
+        <p>A quick re-explanation is .... anything between the Opening Head tag and the Closing Head tag (it's content) will not be displayed in our webpage. Except anything inbetween the <strong> Opening Body Tag </strong> and the <strong> Closing Body Tag </strong>. </p>
+        <h3>Welcome aboard once again</h3>
+        <p>
+            I believe in this chapter, we've fully understood what HTML tag, content  and Element is? Also, We've had a good grasp of understanding of what A DOCTYPE is? Please make sure you understand this if you haven't before moving to the next chapter. 
+        </p>
+
+        <button id="takeQuiz">Take Quiz</button>
+        <h2 id="project">Project</h2>
+        <p>Make a research on other HTML doctype. The following  versions of  HTML DOCTYPE: </p>
+        <ol>
+            <li>HTML 2</li>
+            <li>HTML 3.2</li>
+        </ol>
+        <button class="btn">Prev Lesson</button>
+        <button class="btn">Next Lesson</button>
+    </main>
+    <section id="quizBox">
+        <p id="question" style="font-size: 1.5rem; text-indent: 0;">What does <b>HTML</b> stands for? </p>
+        <form>
+            <label>
+                <input type="radio" name="quiz" id="option1"/>
+                <span id="optionTxt1"></span>
+            </label>
+             <label>
+                <input type="radio" name="quiz"  id="option2"/>
+                <span id="optionTxt2"></span>
+            </label> 
+            <label>
+                <input type="radio" name="quiz" id="option3"/>
+                <span id="optionTxt3"></span>
+            </label> 
+            <label>
+                <input type="radio" name="quiz" id="option4" />
+                <span id="optionTxt4"></span>
+            </label>
+            <div class=".lastSpan">999</div>
+            <button id="btn1" type="button">Prev</button>
+            <button id="btn2" type="button">Submit</button>
+            <button id="btn3" type="button">Next</button>
+        </form>
+    </section>
+    <hr style="margin-bottom: 0;" />
+    <footer id="footer">
+        <ul>
+            <a href="../index.html">
+                <li>Home</li>
+            </a>
+            <a href="../contact.html">
+                <li>Contact</li>
+            </a>
+            <a href="../support.html">
+                <li>Support</li>
+            </a>
+            <a href="../about.html">
+                <li>About</li>
+            </a>
+            <a href="../sitemaps.html">
+                <li>Sitemaps</li>
+            </a>
+            <a href="../sourcegit.html">
+                <li>Source Code</li>
+            </a>
+        </ul>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>
