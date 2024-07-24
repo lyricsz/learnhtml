@@ -1,137 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage - Learn HTML With PJ Dev</title>
-    <meta name="author" content="PJ Dev" />
-    <meta name="description" content="Hey, Hope we all have fun Learning front-end web development skill -- HTML" />
-    <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes and Entities</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            word-spacing: 6px;
+            cursor: crosshair;
+        }
+        body{
+            background-color: #eee;
+        }
+        h1, h2, h3{
+            text-align: center;
+            background-color: silver;
+            padding: 6px;
+        }
+        fieldset{
+            margin: 40px;
+        }
+        table, tr, th, td{
+            border: 1px solid salmon;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        
-        <h1>Learn HTML With PJ Dev</h1>
+    <h2>HTML Attributes and Entities. </h2>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#attributes">HTML Attributes</a></li>
+        <li><a href="#entities">HTML Entities</a></li>
+    </ul>
+    <h2 id="introduction">Introduction</h2>
+    <p>Hello folks. Before we start the lesson, i'm deeply sorry for the delayed. <br>
+    In this lesson we are going to learn about attributes and entities in HTML. These are super useful as they are frequently used in web pages. So... Have fun and hope you 
+    enjoy the course.  </p>
+    <h2 id="attributes">HTML Attributes</h2>
+    <p>We've talked about HTML tags, elements and contents. We've also discussed about void element. (If you didn't know about these yet, kindly review the past lessons). </p>
+    <p>HTML Attributes in short adds additional information to a tag. You can also think of these informations as properties. Some tags comes with built in attributes that we 
+        can override. And some attribute... are just what we come up with.Web browsers did not understood <strong>Attributes that we come up with</strong>. (But we can use them with other
+         languages such as CSS ---styling- and JavaScript ---Dynamic-.)
+    </p>
+    <p>The first most important attribute we are going to look at is the "lang" attribute. Lang' is short for language. But first of all, where do we put attributes? At the opening tag for both 
+        void elements and other element. Take a look at the following template:
         <ul>
-            <a href="index.html">
-                <li>Home</li>
-            </a>
-            <a href="learnhtml.html">
-                <li>Learn HTML</li>
-            </a>
-            <a href="about.html">
-                <li>About</li>
-            </a>
-            <a href="contact.html">
-                <li>Contact</li>
-            </a>
+            <li>For other element: </li>
+            <code>
+                &lt;tagName attribut=attributeValue&gt; content &lt;/tagName&gt;
+            </code>
+            <li>For void element: </li>
+            <code>
+                &lt;tagName attribute=attributeValue /&gt; 
+            </code>
         </ul>
-    </header>
-    <hr />
-    <main>
-        <aside>
-            <p>Did you know "All Website uses HTML?"</p>
-        </aside>
-        <aside>
-            <ul>
-                <a href="#introduction">
-                    <li>Introduction</li>
-                </a>
-                <a href="#coursecontent"> 
-                    <li>Course Content</li>
-                </a>
-                <a href="#proscrons">
-                    <li>Pros & Crons</li>
-                </a>
-                <a href="#support">
-                    <li>Support</li>
-                </a>
-            </ul>
-        </aside>
-        <h2 id="introduction">Introduction</h2>
-        <p>
-            Hello Everyone, Folks, and Probably all. Welcome to official PJ Dev tutorial on <strong>Web Development</strong>. 
-
-            It is our honor to bring this tutorial officially to online where  everyone can learn for free. Hopefully, We all enjoy the course. For now We're only bringimg <strong>HTML5</strong> (There'll be tutorials on others as well in the future --- Basically <dfn title="Cascading Style Sheet">CSS</dfn> and <dfn title="JavaScript">JS</dfn>
+        <br>
+        Now that we've seen the syntax of HTML attributes. Let's look at some examples. Starting with the lang' attribute. 
+    </p>
+    <p>Lang attribute is used to specify the language used in a webpage. If not specified web browser tends to guess by looking at the content of our webpage. This can create lots 
+        of hidden trouble. E.g our texts can be rendered in a very weird way we did not want. To fix this, specify the language used by adding a lang attribute to the ROOT opening tag. 
+        This is a simple example: <br>
+        <code>
+            &lt;!DOCTYPE html&gt; <br>
+            &lt;html lang='en'&gt; <br>
+            &lt;head&gt; <br>
+            &lt;title&gt; This website language is set to English &lt;/title&gt; <br>
+            &lt;/head&gt; <br>
+            &lt;body&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt;
+        </code>
+    </p>
+    <p>
+        <fieldset>
+            <legend>Note</legend>
+            <p>You might be tempted to overlook the lang attribute. This is not recommended. Your website might not be rendered properly in production. 
+            So always set the language for your webpage.</p>
+        </fieldset>
+        Voila. The above code now tells the web browser that "Please don't give me any other language. My language is English. ". 
+        The language attribute should be unique. Unless your page is an article with different language. (We'll discussed about this in the future. ) In short, the language you 
+        used in a webpage must be consistent. If you start with English, stick with English to the end. 
+        <fieldset>
+            <legend>Note</legend>
+            <p>You can use both double quote and single quote for the attributeValue 😉. In other words both of the following are valid: 
+                <ul>
+                    <li>Single quote is valid</li>
+                    <code>&lt;tagName attribute='attributeValue' /&gt;</code>
+                    <li>Double quote is valid</li>
+                    <code>&lt;tagName attribute="attributeValue" /&gt;</code>
+                </ul>
+            </p>
+            <p>But since HTML is so forgiving ("that" has it's limit), the below code is also valid: </p>
+            <code>&lt;tagName attribute=attributeValue /&gt;</code> 
+            <p>However, even though it is valid. Never use it. Never use it. It's 100% not recommended. Use single quote or double quote instead. </p>
+        </fieldset>
+        <p>Let's move on to HTML Entities. </p>
+    </p>
+    <h2 id="entities">HTML Entities</h2>
+    <p>Let's start with two short story. </p>
+    <fieldset>
+        <legend>Short Story</legend>
+        <p>There lived a web developer named Jack. He lived in Massachussets. </p>
+        <p>He was writing code, specificly HTML. When he reached the footer... he get stuck looking for the copyright symbol in his keyboard. He couldn't found it. He was about to give up
+            when he realized his Uncle, Clerk... is a web developer also who has used copyright symbol in most websites he has built.
         </p>
-        <p>
-            Also, In case some of the code examples are not working, You can kindly message us... Or in case you spotted an error or mistake (probably if your also a developer taking part in the course). If you also want to contribute  into teaching others, you can join the collaborators on the official <dfn title="The official Github is A FLOSS Project --- Anyone can contribute"> Github Account</dfn>
-        </p>
-        <h2 id="coursecontent">Course Content</h2>
-        <p>Hello Learners, This is an ongoing course... and we're so glad to have you here. The course content will be listed below in a table form. Feel free to learn at your convenient. And Happy Learning</p>
-        <details>
-            <summary>View Course Content</summary>
-            <table border="1px" border-collaspe="collapse">
-                <tr>
-                    <th class="headingTable">Topic</th>
-                    <th class="headingTable">Content</th>
-                </tr>
-                <tr>
-                    <th><a href="lesson%201/index.html"> HTML Overview </a></th>
-                    <td>This chapter focuses on what the course content is all about, What to learn, and Pre-requisite to learn HTML. This is sometimes referred to as <strong>Lesson 0</strong>.</td>
-                </tr>
-                <tr>
-                    <th>HTML Introduction</th>
-                    <td>What is <em>HTML</em>? What is it used for? Is <strong>HTML</strong> a programming languge? Why is it important to <em>HTML</em>? This chapter introduces you to HTML Afresh.</td>
-                </tr>
-                <tr>
-                    <th>DOCTYPE Declaration, HTML Element</th>
-                    <td>Element is a very important concept to grasp when learning HTML. This chapter covers what it is, and also cover <strong>DOCTYPE Declaration</strong>.</td>
-                </tr>
-                <tr>
-                    <th>Attribute & Entities</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Display - Inline & Block Level Element</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Headings and Paragraphs</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Text Formatting</th>
-                    <td></td>
-                </tr>
-
-            </table>
-        </details>
-        <h2 id="proscons">Pros & Cons</h2>
-        <p>
-            The advantages of taking part in this course is that , <i>It's free, And contain varieties of example.</i>
-            When it comes to coding&nbsp;/&nbsp;programming we all learn more by doing. 
-        </p>
-        <p>
-            The disadvantages is , <i>This course is an online and of course that require internet connection</i>, also, <i>The course might not cover everything about <strong>HTML</strong></i>.
-        </p>
-        <h2 id="support">Support</h2>
-        <p>
-            Hello there, Folks. You can kindly support us by  contributing to the tutorials (if you have existing knowlegde about HTML) or Simply by donating. Thanks alot. You can find more ways to support on the <a href="support.html"> <strong>Support Page</strong> </a>
-        </p>
-    </main>
-    <hr style="margin-bottom: 0;" />
-    <footer>
-        <ul>
-            <a href="index.html">
-                <li>Home</li>
-            </a>
-            <a href="contact.html">
-                <li>Contact</li>
-            </a>
-            <a href="support.html">
-                <li>Support</li>
-            </a>
-            <a href="about.html">
-                <li>About</li>
-            </a>
-            <a href="sitemaps.html">
-                <li>Sitemaps</li>
-            </a>
-            <a href="sourcegit.html">
-                <li>Source Code</li>
-            </a>
-        </ul>
-    </footer>
+        <p>He decided to call him. Clerk informs him about HTML entities.</p>
+        <p>Ever since then, his life was never the same. </p>
+    </fieldset>
+    <fieldset>
+        <legend>Short Story</legend>
+        <p>There lived a self-taught web developer named Tom. She had a sibling named Jerry. Both lived alone in Accra. </p>
+        <p>A certain night, Jerry came back home and found his sister tired. Tom! What's wrong, he exclaimed. </p>
+        <p>Jerry, how did other web developers add more than one spaces to their webpage. I've been trying since the past four hours.
+        All the spaces i typed were trimmed to only one space by the web browser. </p>
+        <p>Are you kidding me, Tom. Just used non-breaking-space entities and your life will never be the same. </p>
+    </fieldset>
+    <p>For a second... Imagine if you can write all the stickers, characters, in this world. but how's that even possible? HTML Entities is your answer. 
+    HTML Entities adds character to your webpage. This means that whatever you typed stands for something even if it's nothing like "spaces". It is something. Each entity represents a character. There 
+    are alot of possible characters available to you. They even range to stickers. </p>
+    <p>HTML Entities uses the following syntax: </p>
+    <ul>
+        <li>Using entity name: </li>
+        <code>&entityName</code>
+        <li>Using entity number: </li>
+        <code>&#entityNumber</code>
+        <li>Using entity hexadecimal: </li>
+        <code>&amp;#xentityHexadeciaml</code>
+    </ul>
+    <p>The above syntax might look cryptic at first. As you use it, you get more familiar with it. You can use any of the three. I use entity name most of the time. </p>
+    <fieldset>
+        <legend>Note</legend>
+        <p>If you use entity name, append (or add a prefix) of "&". If you use entity number (decimal 0 - 9 --- base 10), append (or add a prefix) of "&#". If you use entity hexadecimal (0 - 15
+            --- base 16), append (or add a prefix) of "&#x". </p>
+    </fieldset>
+    <p>Let's look at some use cases of HTML Entities. Looking at my keyboard right now i couldn't find copyright symbol. So let's see how how i can add copyright to a webpage using entities. </p>
+    <code>
+        &lt;!DOCTYPE html&gt; <br>
+        &lt;html lang="en"&gt; <br>
+        &lt;head&gt; <br>
+        &lt;title&gt; A Copyright Page &lt;/title&gt; <br>
+        &lt;/head&gt; <br>
+        &lt;body&gt; <br>
+        &amp;copy <br>
+        &lt;/body&gt; <br>
+        &lt;/html&gt; <br>
+    </code>
+    <p>The above code is incorrect. If you run it, it does works right? But always end your HTML Entities with ";". (Always follow the best practices 😊). </p>
+    <p>If you fix the above code, kindly share the code to the group. (Don't forget all HTML files ends with '.html' file extension). </p>
+    <p>Let's look at some other two most important entities.</p>
+    <p>As we've discussed in past lessons, you can't add more than one spaces to your html code. Web browser will trimmed it to only a space. But what if i told you can use entities to achieve
+    this goal? We use the non-breaking space entity. This entity is a little bit weird. It exist as if it doesn't exist. It is a space but it is a character. Hence you can add as many space to your webpage as possible. You can also use it to join two words together. ( i think an example will explain this better).
+    </p>
+    <code>
+        &lt;!DOCTYPE html&gt; <br>
+        &lt;html lang="en"&gt; <br>
+        &lt;head&gt; <br>
+        &lt;title&gt; A Non-breaking space  &lt;/title&gt; <br>
+        &lt;/head&gt; <br>
+        &lt;body&gt; <br>
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Hello world. This line starts with four space. <br>
+        (The following words are just one word to the web browser, hence they never seperate.
+        They must all be in the same line. If the line is not enough for them, they create scrollbars. Try it out. ) &amp;nbsp;There&amp;nbsp;Lived&amp;nbsp;an&amp;nbsp;amazing&amp;nbsp;web&amp;nbsp;developer&amp;nbsp;.&amp;nbsp;
+        <br>
+        &lt;/body&gt; <br>
+        &lt;/html&gt; <br>
+    </code>
+    <p>You can make the second example in the above code as long as possible, but they will never break as seperate words do... since you are using an entity instead of spaces. </p>
+    <p>The last most use case is when you want to add a less-than symbol to a webpage or  a greater-than symbol. If you avoid entities, the web browser will automatically think you are starting a tag or closing a tag. But that's not the case. We only want to include them in a webpage. Let's take a look at below code: </p>
+    <code>
+        &lt;!DOCTYPE html&gt; <br>
+        &lt;html lang="en"&gt; <br>
+        &lt;head&gt; <br>
+        &lt;title&gt; Did you know? &lt;/title&gt; <br>
+        &lt;/head&gt; <br>
+        &lt;body&gt; <br>
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Did you know? <br>
+        20 + 20 &amp;gt; 30 <br>
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Did you know? <br>
+        20 - 20 &amp;lt; 30 <br>
+        &lt;/body&gt; <br>
+        &lt;/html&gt; <br>
+    </code>
+    <p>Change the &amp;lt; to &lt; and &amp;gt; to &gt;, notice how the web browser completely misunderstood you? The below table summarizes all HTML entities we've discussed so far: </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Entities name</th>
+                <th>Usage</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>nbsp</th>
+                <td>I&amp;nbsp;Love&amp;nbsp;You</td>
+                <td>Used to add empty character to webpage. Appear the same as adding space to webpage. (nbsp stands for non-breaking space). </td>
+            </tr>
+            <tr>
+                <th>lt</th>
+                <td>is 2 &amp;lt; 4? </td>
+                <td>Used to add less-than character to webpage. If normal less-than is used, web browser might think we meant something else. (lt stands for less-than). </td>
+            </tr>
+            <tr>
+                <th>gt</th>
+                <td>is 2 &amp;gt; 4? </td>
+                <td>Used to add greater-than character to webpage. If normal greater-than is used, web browser might think we meant something else. (gt stands for greater-than). </td>
+            </tr>
+            <tr>
+                <th>copy</th>
+                <td>&amp;copy;2024 </td>
+                <td>Used to add copyright character to webpage. Most keyboards don't have the character. (copy stands for copyright). </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Before we finish the lesson. Here's a quick note. </p>
+    <fieldset>
+        <legend>Note</legend>
+        <p>We've discussed what HTML attribue are earlier, but some attribue did not need a value explicitly. If an attribue is either yes/no, true/false, enabled/disabled... By just adding the attribute without the value, it means on/true/yes/enabled e.t.c. and by omiting it, it meant otherwise. Check below example: (It disabled a button, but the attribue has no value)</p>
+        <code>
+            &lt;button disabled&gt; Click Me &lt;/button&gt;
+        </code>
+    </fieldset>
+    <p>That marks the end of this lesson. :) </p>
+    <h3>Task</h3>
+    <p>Create a html file, add only a copyright to it, and ensure it is a hexadecimal entity. </p>
 </body>
 </html>
